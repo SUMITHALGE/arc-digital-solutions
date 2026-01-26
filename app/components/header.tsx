@@ -22,19 +22,25 @@ export function Header() {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
-      style={{ backgroundColor: "#F2F3F4" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <nav className="w-full px-6">
+
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">AD</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">
-                Arc Digital Solution
-              </span>
-            </Link>
+          <div className="flex items-start">
+           <Link href="/" className="flex items-center">
+  <img
+    src="/logo.svg"
+    alt="Arc Digital Logo"
+    style={{ height: "165px", width: "auto" }}
+  />
+  <span className="text-2xl font-bold text-foreground ml-[-12px] relative top-[9px]">
+    Digital Solution
+  </span>
+</Link>
+
+
+
           </div>
 
           <div className="hidden md:flex md:items-center md:gap-8">
