@@ -9,7 +9,7 @@ const footerLinks = {
   ],
   company: [
     { name: "About Us", href: "#" },
-    { name: "Our Team", href: "#" },
+    { name: "Our Team", href: "/team" },
     { name: "Careers", href: "#" },
     { name: "Contact", href: "#contact" },
   ],
