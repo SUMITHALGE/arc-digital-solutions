@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -13,6 +15,10 @@ export function HeroSection() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
+        onLoadedMetadata={(e) => {
+          const video = e.target as HTMLVideoElement;
+          video.playbackRate = 2; // Adjust speed: 1.5 = 50% faster, 2.0 = 2x speed
+        }}
       >
         <source src="/office.mp4" type="video/mp4" />
       </video>
