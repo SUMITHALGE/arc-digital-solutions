@@ -2,12 +2,16 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arcdigitalsolution.in"),
+
   title: {
     default: "Arc Digital Solution | Web Development & Digital Services",
     template: "%s | Arc Digital Solution",
   },
+
   description:
     "Arc Digital Solution helps businesses grow with high-performance websites, SEO, maintenance, and digital solutions. Transforming ideas into digital excellence.",
+
   keywords: [
     "Arc Digital Solution",
     "Web Development Company",
@@ -18,20 +22,24 @@ export const metadata: Metadata = {
     "Website Maintenance",
     "Next.js Agency",
   ],
+
   authors: [{ name: "Arc Digital Solution" }],
   creator: "Arc Digital Solution",
 
-  metadataBase: new URL("https://arcdigitalsolution.in"), 
+  icons: {
+    icon: "/favicon.ico", // 👈 MUST exist in /public
+    apple: "/apple-touch-icon.png",
+  },
 
   openGraph: {
     title: "Arc Digital Solution | Digital Excellence",
     description:
       "We build modern, fast, and scalable websites with SEO and digital services that convert visitors into leads.",
-    url: "https://arcdigitalsolution.com",
+    url: "https://arcdigitalsolution.in",
     siteName: "Arc Digital Solution",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png", // optional but recommended
         width: 1200,
         height: 630,
         alt: "Arc Digital Solution",
@@ -57,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Google Structured Data */}
+        {/* ✅ Structured Data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -66,15 +74,18 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Arc Digital Solution",
               url: "https://arcdigitalsolution.in",
-              logo: "https://arcdigitalsolution.com/logo.svg",
+              logo: "https://arcdigitalsolution.in/logo.svg",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+91-7719902074",
                 contactType: "customer support",
+                areaServed: "IN",
+                availableLanguage: ["English"],
               },
             }),
           }}
         />
+
         {children}
       </body>
     </html>
