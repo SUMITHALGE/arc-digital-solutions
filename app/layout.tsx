@@ -65,7 +65,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Arc Digital Solution",
-              url: "https://arcdigitalsolution.com",
+              url: "https://arcdigitalsolution.in",
               logo: "https://arcdigitalsolution.com/logo.svg",
               contactPoint: {
                 "@type": "ContactPoint",
