@@ -80,16 +80,16 @@ export function Header() {
             >
               <div className="relative">
                 <img
-                  src="/logo.svg"
-                  alt="Arc Digital Logo"
-                  className="h-[165px] w-auto transition-transform duration-300 group-hover:scale-105"
+                src="/logo1.svg"
+                 alt="Arc Digital Logo"
+                 style={{ height: "250px", width: "auto" , marginTop:"15px" }}
                 />
                 {/* Glow effect on logo */}
                 <div className="absolute inset-0 bg-[#FFD400]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
               </div>
               
               <span className="text-2xl font-bold text-white ml-[-12px] relative top-[9px] group-hover:text-[#FFD400] transition-colors duration-300">
-                Digital Solution
+                
               </span>
               
               {/* Sparkle effect */}

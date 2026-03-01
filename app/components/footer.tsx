@@ -29,16 +29,14 @@ const footerLinks = {
   ],
   resources: [
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Case Studies", href: "#portfolio" },
+    //{ name: "Case Studies", href: "#portfolio" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Get a Quote", href: "#contact" },
   ],
 };
 
 const socialLinks = [
-  { name: "Twitter", icon: Twitter, href: "#", color: "#1DA1F2" },
   { name: "LinkedIn", icon: Linkedin, href: "#", color: "#0A66C2" },
-  { name: "GitHub", icon: Github, href: "#", color: "#FFD400" },
   { name: "Instagram", icon: Instagram, href: "#", color: "#E4405F" },
 ];
 
@@ -50,7 +48,7 @@ export function Footer() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle, #FFD400 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, #ffd400 1px, transparent 1px)`,
             backgroundSize: "50px 50px",
           }}
         />
@@ -91,7 +89,7 @@ export function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-[#FFD400]/10 transition-colors duration-300">
                   <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <span className="text-sm">contact@arcdigital.com</span>
+                <span className="text-sm">contact.@arcdigitalsolution.com</span>
               </a>
 
               <a href="tel:+917719902074" className="group flex items-center gap-3 text-slate-400 hover:text-[#FFD400] transition-colors duration-300">

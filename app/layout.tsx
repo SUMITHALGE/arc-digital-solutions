@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   creator: "Arc Digital Solution",
 
   icons: {
-    icon: "/favicon.ico", // 👈 MUST exist in /public
+    icon: "/favicon.png", // 👈 MUST exist in /public
     apple: "/apple-touch-icon.png",
   },
 
