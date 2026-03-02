@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "Web Development Company",
     "Website Design",
     "SEO Services",
+    "APP DEVELOPMENT",
+    "APPLICATION DEVELOPMENT",
+    "WEBSITE DESIGNER IN PUNE",
     "IT Services",
     "Digital Agency",
     "Website Maintenance",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
       {
         url: "/og-image.png", // optional but recommended
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "Arc Digital Solution",
       },
     ],
@@ -79,7 +82,7 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 telephone: "+91-7719902074",
                 contactType: "customer support",
-                areaServed: "IN",
+                areaServed: "PUNE",
                 availableLanguage: ["English"],
               },
             }),
