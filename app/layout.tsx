@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Outfit({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "1280",
+};
 
 export const metadata: Metadata = {
   title: "Arc Digital Solution | Best Web Development Company in Pune | Digital Services",
@@ -11,7 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arc Digital Solution" }],
   creator: "Arc Digital Solution",
   publisher: "Arc Digital Solution",
-  
+
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -105,7 +109,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

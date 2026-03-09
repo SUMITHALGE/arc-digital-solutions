@@ -9,25 +9,25 @@ const services = [
   {
     title: "Website Development",
     description: "Custom-built websites and web applications tailored to your business needs. From responsive landing pages to complex enterprise solutions.",
-    icon: Code,
+    image: "/service_web_dev.png",
     features: ["Custom Design", "Responsive Layout", "Modern Stack"],
   },
   {
     title: "Website Maintenance",
     description: "Keep your website running smoothly with regular updates, security patches, and performance optimization to ensure peak performance.",
-    icon: Settings,
+    image: "/service_maintenance.png",
     features: ["Security Updates", "Performance Tuning", "Content Updates"],
   },
   {
     title: "SEO Optimization",
     description: "Boost your online visibility and drive organic traffic with our data-driven SEO strategies and technical optimization services.",
-    icon: Search,
+    image: "/service_seo.png",
     features: ["Keyword Research", "Technical SEO", "Analytics"],
   },
   {
     title: "Hosting & Support",
     description: "Reliable, secure hosting solutions with 24/7 support. We handle the infrastructure so you can focus on growing your business.",
-    icon: Server,
+    image: "/service_hosting.png",
     features: ["99.9% Uptime", "24/7 Support", "Auto Backups"],
   },
 ];
@@ -109,13 +109,14 @@ export function ServicesSection() {
                 {/* Top Accent Line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD400] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl" />
                 
-                {/* Icon */}
-                <div className="mb-6 relative">
-                  <div className="w-16 h-16 rounded-xl bg-[#FFD400]/10 flex items-center justify-center group-hover:bg-[#FFD400] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-lg group-hover:shadow-[#FFD400]/50">
-                    <service.icon className="h-8 w-8 text-[#FFD400] group-hover:text-slate-900 transition-all duration-300 group-hover:scale-110" />
-                  </div>
-                  {/* Icon Glow Effect */}
-                  <div className="absolute inset-0 w-16 h-16 rounded-xl bg-[#FFD400]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+                {/* Service Image */}
+                <div className="mb-6 relative h-40 w-full rounded-xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(255,212,0,0.15)] transition-all duration-500 border border-white/5">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                  />
+                  {/* Dark gradient overlay for text legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />
                 </div>
 
                 {/* Content */}

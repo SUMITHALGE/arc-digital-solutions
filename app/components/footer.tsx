@@ -22,7 +22,7 @@ const footerLinks = {
     { name: "Hosting & Support", href: "#services" },
   ],
   company: [
-    { name: "About Us", href: "#" },
+    { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
     { name: "Why Choose Us", href: "/why-us" },
     { name: "Contact", href: "#contact" },
@@ -244,14 +244,14 @@ export function Footer() {
             {/* Legal Links */}
             <div className="flex gap-6">
               <Link 
-                href="#" 
+                href="/privacy" 
                 className="group text-sm text-slate-400 hover:text-[#FFD400] transition-colors duration-300 flex items-center gap-1"
               >
                 <span>Privacy Policy</span>
                 <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
               </Link>
               <Link 
-                href="#" 
+                href="/terms" 
                 className="group text-sm text-slate-400 hover:text-[#FFD400] transition-colors duration-300 flex items-center gap-1"
               >
                 <span>Terms of Service</span>

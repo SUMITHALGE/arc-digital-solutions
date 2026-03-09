@@ -13,7 +13,7 @@ const projects = [
     category: "Enterprise",
     description: "A comprehensive financial management platform with real-time analytics and reporting.",
     tags: ["React", "Node.js", "PostgreSQL"],
-    icon: Layout,
+    image: "/portfolio_fintech.png",
     stats: { metric: "40%", label: "Efficiency Boost" },
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     category: "E-Commerce",
     description: "Full-featured online store with inventory management and payment integration.",
     tags: ["Next.js", "Stripe", "MongoDB"],
-    icon: ShoppingCart,
+    image: "/portfolio_ecommerce.png",
     stats: { metric: "250%", label: "Sales Growth" },
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     category: "Web Development",
     description: "Patient management system with appointment scheduling and medical records.",
     tags: ["Vue.js", "Django", "AWS"],
-    icon: Code,
+    image: "/portfolio_healthcare.png",
     stats: { metric: "10K+", label: "Active Users" },
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     category: "Web Development",
     description: "Property listing platform with virtual tours and agent matching system.",
     tags: ["React", "Firebase", "Maps API"],
-    icon: Briefcase,
+    image: "/portfolio_realestate.png",
     stats: { metric: "5K+", label: "Properties" },
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     category: "Enterprise",
     description: "Business intelligence tool with customizable dashboards and data visualization.",
     tags: ["Angular", "Python", "Redis"],
-    icon: Layout,
+    image: "/portfolio_saas.png",
     stats: { metric: "99.9%", label: "Uptime" },
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     category: "E-Commerce",
     description: "Complete retail solution with POS integration and multi-location inventory.",
     tags: ["Next.js", "GraphQL", "MySQL"],
-    icon: ShoppingCart,
+    image: "/portfolio_retail.png",
     stats: { metric: "30+", label: "Locations" },
   },
 ];
@@ -162,22 +162,15 @@ export function PortfolioSection() {
               {/* Card */}
               <div className="relative h-full bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl overflow-hidden hover:border-[#FFD400]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#FFD400]/20 hover:-translate-y-2">
                 
-                {/* Image/Icon Container */}
-                <div className="relative h-56 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                  {/* Animated Icon Background */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="w-24 h-24 rounded-2xl bg-[#FFD400]/10 flex items-center justify-center backdrop-blur-sm group-hover:bg-[#FFD400] transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
-                        <project.icon className="w-12 h-12 text-[#FFD400] group-hover:text-slate-900 transition-all duration-500 icon-bounce" />
-                      </div>
-                      
-                      {/* Icon Glow */}
-                      <div className="absolute inset-0 w-24 h-24 rounded-2xl bg-[#FFD400]/40 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
-                      
-                      {/* Orbiting Rings */}
-                      <div className="absolute inset-0 w-24 h-24 border-2 border-[#FFD400]/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-ping-slow" />
-                    </div>
-                  </div>
+                {/* Project Image Container */}
+                <div className="relative h-56 bg-slate-900 border-b border-white/5 overflow-hidden">
+                  {/* Generated Project Showcase Image */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  />
+                  {/* Dark overlay for text legibility */}
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-slate-900/80 backdrop-blur-sm border border-[#FFD400]/30">
