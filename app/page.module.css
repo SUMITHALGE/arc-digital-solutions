@@ -1,0 +1,6 @@
+.main {
+  /* Main wrapper for the page to ensure CSS module functionality is present */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

@@ -1,0 +1,41 @@
+@reference "../globals.css";
+
+.container {
+    @apply min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto;
+}
+
+.title {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-white;
+}
+
+.highlight {
+    @apply text-[#FFD400];
+}
+
+.content {
+    @apply text-slate-300 space-y-6;
+}
+
+.date {
+    @apply text-sm text-slate-400 mb-8;
+}
+
+.lead {
+    @apply text-lg leading-relaxed;
+}
+
+.heading2 {
+    @apply text-2xl font-bold text-white mt-12 mb-4;
+}
+
+.list {
+    @apply list-disc pl-6 space-y-2;
+}
+
+.contactBox {
+    @apply mt-12 p-6 bg-slate-900 border border-slate-800 rounded-xl;
+}
+
+.contactTitle {
+    @apply text-lg font-bold text-white mb-2;
+}

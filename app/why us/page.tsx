@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { 
-  Users, 
-  Zap, 
-  Shield, 
+import {
+  Users,
+  Zap,
+  Shield,
   HeadphonesIcon,
   Award,
   Target,
@@ -15,6 +15,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import Link from "next/link";
+import styles from "./why-us.module.css";
 
 const mainFeatures = [
   {
@@ -122,8 +123,8 @@ export default function WhyUsPage() {
       const timer = setInterval(() => {
         currentStep++;
         const progress = currentStep / steps;
-        
-        setCounters(targets.map(target => 
+
+        setCounters(targets.map(target =>
           Math.floor(target * easeOutQuart(progress))
         ));
 
@@ -142,11 +143,11 @@ export default function WhyUsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <main className={styles.main}>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className={styles.heroSection}>
         {/* Background Effects */}
-        <div className="absolute inset-0 opacity-[0.02]">
+        <div className={styles.heroBg}>
           <div
             className="absolute inset-0"
             style={{
@@ -156,26 +157,26 @@ export default function WhyUsPage() {
           />
         </div>
 
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#FFD400]/5 rounded-full blur-[100px] animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#FFD400]/3 rounded-full blur-[120px] animate-float-delayed" />
+        <div className={styles.heroFloat1} />
+        <div className={styles.heroFloat2} />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
             <div className="inline-block mb-4">
-              <span className="text-[#FFD400] text-sm font-semibold tracking-[0.2em] uppercase border border-[#FFD400]/30 px-4 py-2 rounded-full hover:border-[#FFD400] hover:shadow-lg hover:shadow-[#FFD400]/20 transition-all duration-300">
+              <span className={styles.badge}>
                 Why Choose Us
               </span>
             </div>
-            
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+
+            <h1 className={styles.title}>
               We Build Digital Solutions That Drive{" "}
-              <span className="text-[#FFD400] inline-block hover:scale-105 transition-transform duration-300">
+              <span className={styles.highlight}>
                 Results
               </span>
             </h1>
-            
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-              With over a decade of experience in delivering IT solutions, we understand what it takes 
+
+            <p className={styles.subtitle}>
+              With over a decade of experience in delivering IT solutions, we understand what it takes
               to build successful digital products. Our client-first approach ensures your vision becomes reality.
             </p>
           </div>
@@ -183,33 +184,32 @@ export default function WhyUsPage() {
       </section>
 
       {/* Stats Section */}
-      <section 
+      <section
         ref={sectionRef}
-        className="relative py-20 border-y border-slate-800"
+        className={styles.statsSection}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className={styles.heroContent}>
+          <div className={styles.statsGrid}>
             {stats.map((stat, index) => (
-              <div 
+              <div
                 key={stat.label}
-                className={`group text-center transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group ${styles.statItem} ${isVisible ? styles.statItemVisible : styles.statItemHidden
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="relative inline-block">
-                  <p className="text-5xl lg:text-6xl font-bold text-[#FFD400] group-hover:scale-110 transition-transform duration-300">
+                <div className={styles.statValueContainer}>
+                  <p className={styles.statValue}>
                     {index === 0 ? `${counters[index]}+` :
-                     index === 1 ? `${counters[index]}%` :
-                     index === 2 ? `${counters[index]}+` :
-                     `${counters[index]}+`}
+                      index === 1 ? `${counters[index]}%` :
+                        index === 2 ? `${counters[index]}+` :
+                          `${counters[index]}+`}
                   </p>
-                  <div className="absolute -inset-4 bg-[#FFD400]/10 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                  <div className={styles.statGlow} />
                 </div>
-                <p className="text-lg font-semibold text-white mt-3">
+                <p className={styles.statLabel}>
                   {stat.label}
                 </p>
-                <p className="text-sm text-slate-400 mt-1">
+                <p className={styles.statDesc}>
                   {stat.description}
                 </p>
               </div>
@@ -219,55 +219,55 @@ export default function WhyUsPage() {
       </section>
 
       {/* Main Features Section */}
-      <section className="relative py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+      <section className={styles.featuresSection}>
+        <div className={styles.heroContent}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
               Our Core <span className="text-[#FFD400]">Strengths</span>
             </h2>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            <p className={styles.sectionSubtitle}>
               Four pillars that make us the preferred choice for businesses worldwide.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className={styles.featuresGrid}>
             {mainFeatures.map((feature, index) => (
               <div
                 key={feature.title}
-                className="group relative animate-slide-up"
+                className={`group ${styles.featureCardWrapper}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="relative h-full p-8 rounded-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm hover:border-[#FFD400]/50 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FFD400]/10 hover:-translate-y-2 overflow-hidden">
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#FFD400]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD400] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className={styles.featureCard}>
 
-                  <div className="relative flex items-start justify-between mb-6">
+                  <div className={styles.featureBgGrad} />
+                  <div className={styles.featureTopLine} />
+
+                  <div className={styles.featureHeader}>
                     <div className="relative">
-                      <div className="h-16 w-16 rounded-xl bg-[#FFD400]/10 flex items-center justify-center group-hover:bg-[#FFD400] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-                        <feature.icon className="h-8 w-8 text-[#FFD400] group-hover:text-slate-900 transition-all duration-300 icon-float" />
+                      <div className={styles.featureIconWrapper}>
+                        <feature.icon className={styles.featureIcon} />
                       </div>
-                      <div className="absolute inset-0 h-16 w-16 rounded-xl bg-[#FFD400]/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+                      <div className={styles.featureIconGlow} />
                     </div>
 
                     <div className="text-right">
-                      <p className="text-4xl font-bold text-white group-hover:text-[#FFD400] transition-colors duration-300">
+                      <p className={styles.featureStatVal}>
                         {feature.stat}
                       </p>
-                      <p className="text-xs text-slate-400 group-hover:text-[#FFD400]/80 transition-colors duration-300">
+                      <p className={styles.featureStatLabel}>
                         {feature.statLabel}
                       </p>
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-[#FFD400] transition-colors duration-300">
+                  <h3 className={styles.featureTitle}>
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className={styles.featureDesc}>
                     {feature.description}
                   </p>
 
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD400] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl" />
+                  <div className={styles.featureBottomLine} />
                 </div>
               </div>
             ))}
@@ -276,28 +276,28 @@ export default function WhyUsPage() {
       </section>
 
       {/* Additional Benefits */}
-      <section className="relative py-20 bg-slate-900/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+      <section className={styles.benefitsSection}>
+        <div className={styles.heroContent}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
               Additional <span className="text-[#FFD400]">Benefits</span>
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className={styles.benefitsGrid}>
             {additionalBenefits.map((benefit, index) => (
               <div
                 key={benefit.title}
-                className="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-[#FFD400]/50 transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+                className={`group ${styles.benefitCard}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-lg bg-[#FFD400]/10 flex items-center justify-center mb-4 group-hover:bg-[#FFD400] group-hover:scale-110 transition-all duration-300">
-                  <benefit.icon className="w-6 h-6 text-[#FFD400] group-hover:text-slate-900 transition-colors duration-300" />
+                <div className={styles.benefitIconWrapper}>
+                  <benefit.icon className={styles.benefitIcon} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#FFD400] transition-colors duration-300">
+                <h3 className={styles.benefitTitle}>
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                <p className={styles.benefitDesc}>
                   {benefit.description}
                 </p>
               </div>
@@ -307,25 +307,25 @@ export default function WhyUsPage() {
       </section>
 
       {/* Why Choose Points */}
-      <section className="relative py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+      <section className={styles.reasonsSection}>
+        <div className={styles.reasonsContainer}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
               More Reasons to <span className="text-[#FFD400]">Choose Us</span>
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className={styles.reasonsGrid}>
             {whyChoosePoints.map((point, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/30 border border-slate-800 hover:border-[#FFD400]/30 transition-all duration-300 animate-slide-up"
+                className={styles.reasonCard}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FFD400]/10 flex items-center justify-center mt-0.5">
-                  <Check className="w-4 h-4 text-[#FFD400]" />
+                <div className={styles.reasonIconWrapper}>
+                  <Check className={styles.reasonIcon} />
                 </div>
-                <p className="text-slate-300">{point}</p>
+                <p className={styles.reasonText}>{point}</p>
               </div>
             ))}
           </div>
@@ -333,31 +333,31 @@ export default function WhyUsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-700 p-12 text-center">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FFD400]/5 to-transparent" />
-            
+      <section className={styles.ctaSection}>
+        <div className={styles.reasonsContainer}>
+          <div className={styles.ctaWrapper}>
+            <div className={styles.ctaBgGrad} />
+
             <div className="relative">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className={styles.ctaTitle}>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+              <p className={styles.ctaSubtitle}>
                 Let's discuss how our team can help you achieve your digital goals.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className={styles.ctaButtons}>
                 <Link
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-[#FFD400] text-slate-900 px-8 py-4 rounded-full font-semibold hover:bg-[#FFC700] transition-all duration-300 hover:shadow-xl hover:shadow-[#FFD400]/50 hover:scale-105"
+                  className={styles.ctaPrimary}
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                
+
                 <Link
                   href="/portfolio"
-                  className="inline-flex items-center gap-2 bg-transparent border-2 border-[#FFD400] text-[#FFD400] px-8 py-4 rounded-full font-semibold hover:bg-[#FFD400] hover:text-slate-900 transition-all duration-300"
+                  className={styles.ctaSecondary}
                 >
                   View Our Work
                 </Link>
@@ -366,63 +366,6 @@ export default function WhyUsPage() {
           </div>
         </div>
       </section>
-
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          50% { transform: translateY(-20px) translateX(10px); }
-        }
-
-        @keyframes float-delayed {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          50% { transform: translateY(-30px) translateX(-15px); }
-        }
-
-        @keyframes pulse-glow {
-          0%, 100% { opacity: 0; }
-          50% { opacity: 1; }
-        }
-
-        @keyframes icon-float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-3px); }
-        }
-
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slide-up {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-
-        .animate-float-delayed {
-          animation: float-delayed 10s ease-in-out infinite;
-        }
-
-        .animate-pulse-glow {
-          animation: pulse-glow 2s ease-in-out infinite;
-        }
-
-        .icon-float {
-          animation: icon-float 2s ease-in-out infinite;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 1s ease-out;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out both;
-        }
-      `}</style>
     </main>
   );
 }
