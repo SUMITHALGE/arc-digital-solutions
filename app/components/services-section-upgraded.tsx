@@ -8,27 +8,51 @@ import { useEffect, useRef, useState } from "react";
 const services = [
   {
     title: "Website Development",
-    description: "Custom-built websites and web applications tailored to your business needs. From responsive landing pages to complex enterprise solutions.",
+    description: "Custom-built websites tailored for Pune businesses. From responsive landing pages to enterprise-grade solutions using modern frameworks.",
     image: "/service_web_dev.png",
     features: ["Custom Design", "Responsive Layout", "Modern Stack"],
   },
   {
+    title: "Web Application Development",
+    description: "Scalable, full-stack web applications built with React, Next.js, and Java Spring Boot for startups and enterprises in Maharashtra.",
+    image: "/service_maintenance.png",
+    features: ["Scalable Architecture", "API Development", "Cloud Ready"],
+  },
+  {
+    title: "React & Next.js Development",
+    description: "High-performance frontend development using React and Next.js — delivering fast, SEO-friendly, and interactive user experiences for Pune businesses.",
+    image: "/service_web_dev.png",
+    features: ["Server-Side Rendering", "Component-Based", "Fast Load Times"],
+  },
+  {
+    title: "Java Spring Boot Development",
+    description: "Robust backend APIs and microservices built with Java Spring Boot — trusted by enterprises in Pune for secure, scalable, and production-grade systems.",
+    image: "/service_hosting.png",
+    features: ["RESTful APIs", "Microservices", "Enterprise Security"],
+  },
+  {
+    title: "UI/UX Design",
+    description: "User-centered design that converts visitors into customers. Our Pune-based designers create intuitive, modern interfaces that boost engagement.",
+    image: "/service_web_dev.png",
+    features: ["User Research", "Wireframing", "Interactive Prototypes"],
+  },
+  {
+    title: "SEO Optimization",
+    description: "Boost your Google rankings with data-driven SEO strategies. Technical SEO, local SEO for Pune businesses, and performance optimization.",
+    image: "/service_seo.png",
+    features: ["Keyword Research", "Technical SEO", "Local SEO Pune"],
+  },
+  {
     title: "Website Maintenance",
-    description: "Keep your website running smoothly with regular updates, security patches, and performance optimization to ensure peak performance.",
+    description: "Keep your website running smoothly with regular updates, security patches, and performance optimization — 24/7 support for Pune businesses.",
     image: "/service_maintenance.png",
     features: ["Security Updates", "Performance Tuning", "Content Updates"],
   },
   {
-    title: "SEO Optimization",
-    description: "Boost your online visibility and drive organic traffic with our data-driven SEO strategies and technical optimization services.",
-    image: "/service_seo.png",
-    features: ["Keyword Research", "Technical SEO", "Analytics"],
-  },
-  {
-    title: "Hosting & Support",
-    description: "Reliable, secure hosting solutions with 24/7 support. We handle the infrastructure so you can focus on growing your business.",
+    title: "Landing Page Development",
+    description: "High-converting landing pages optimized for lead generation. Fast, responsive, and designed to maximize ROI for your Pune business campaigns.",
     image: "/service_hosting.png",
-    features: ["99.9% Uptime", "24/7 Support", "Auto Backups"],
+    features: ["Conversion Optimized", "Fast Loading", "A/B Testing Ready"],
   },
 ];
 
@@ -79,7 +103,7 @@ export function ServicesSection() {
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-            Our <span className="text-[#FFD400] inline-block hover:scale-110 transition-transform duration-300">Services</span>
+            Web Development <span className="text-[#FFD400] inline-block hover:scale-110 transition-transform duration-300">Services in Pune</span>
           </h2>
           <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed animate-slide-up-delayed">
             Comprehensive IT solutions designed to help your business thrive in the digital landscape.

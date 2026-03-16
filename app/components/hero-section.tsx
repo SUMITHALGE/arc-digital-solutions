@@ -42,18 +42,18 @@ export function HeroSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFD400] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FFD400]"></span>
                 </span>
-                Trusted by 500+ Innovative Brands
+                Trusted Web Development Company in Pune
               </div>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tighter">
-                Transforming Ideas Into<br />
+                Best Web Development<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD400] via-[#FFB800] to-[#FF8A00] animate-gradient-x">
-                  Digital Excellence
+                  Company in Pune
                 </span>
               </h1>
 
               <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                We craft cutting-edge digital experiences that drive business growth. From scalable web applications to immersive digital strategies, we are your partners in innovation.
+                Arc Digital Solutions builds fast, modern, and SEO-optimized websites using React, Java Spring Boot, and cutting-edge technologies. Your trusted partner for scalable web applications, UI/UX design, and digital growth in Pune, Maharashtra.
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

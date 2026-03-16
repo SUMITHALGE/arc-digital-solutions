@@ -80,7 +80,7 @@ export function Footer() {
             </Link>
 
             <p className="text-slate-400 leading-relaxed mb-6 max-w-sm">
-              Transforming businesses through innovative IT solutions. Your trusted partner for digital excellence and growth.
+              Pune&apos;s most trusted web development company. Transforming businesses through innovative digital solutions, modern web technologies, and dedicated support.
             </p>
 
             {/* Contact Info */}
@@ -89,7 +89,7 @@ export function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-[#FFD400]/10 transition-colors duration-300">
                   <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <span className="text-sm">contact.@arcdigitalsolution.com</span>
+                <span className="text-sm">contact@arcdigitalsolution.com</span>
               </a>
 
               <a href="tel:+917719902074" className="group flex items-center gap-3 text-slate-400 hover:text-[#FFD400] transition-colors duration-300">
