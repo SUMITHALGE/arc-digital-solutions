@@ -46,9 +46,9 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tighter">
-                Best Web Development<br />
+                Transform Your Idea's &nbsp;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD400] via-[#FFB800] to-[#FF8A00] animate-gradient-x">
-                  Company in Pune
+                  Into Digital Excellence
                 </span>
               </h1>
 

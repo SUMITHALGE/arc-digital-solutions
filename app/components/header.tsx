@@ -11,6 +11,7 @@ const navigation = [
   { name: "Portfolio", href: "#portfolio" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Our Team", href: "/team" },
+  { name: "Founder", href: "/founder" },
 ];
 
 const WHATSAPP_URL = "https://wa.me/917719902074";
